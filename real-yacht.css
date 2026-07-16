@@ -1,6 +1,6 @@
 /* Classic sailing-yacht proportions inspired by the supplied reference. */
 .yacht{right:6vw;top:16%;width:min(760px,68vw);height:620px;transform-origin:53% 92%;animation-duration:6.5s}
-.mast{left:52%;bottom:130px;width:5px;height:478px;background:linear-gradient(#6b4f3b,#4a3527);box-shadow:1px 0 #b49a78}
+.mast{left:48%;bottom:180px;width:5px;height:428px;background:linear-gradient(#6b4f3b,#4a3527);box-shadow:1px 0 #b49a78}
 .mast::before{content:'';position:absolute;right:1px;bottom:0;width:148px;height:5px;background:linear-gradient(#6b4f3b,#4a3527);border-radius:3px;transform-origin:100% 50%;transform:rotate(2deg);box-shadow:0 2px 3px rgba(20,20,15,.3)}
 .mast::after{content:'';position:absolute;left:-11px;bottom:250px;width:26px;height:3px;background:#4a3527;border-radius:2px}
 .bio-flag{left:48%;bottom:590px}
@@ -17,9 +17,6 @@
 .poetry{left:9%;width:38%;height:415px;clip-path:polygon(100% 0,71% 20%,45% 40%,34% 50%,25% 60%,11% 80%,0 100%,100% 100%)}
 .songs{left:49%;width:26%;height:355px;clip-path:polygon(0 0,29% 20%,55% 40%,66% 50%,75% 60%,89% 80%,100% 100%,0 100%)}
 .art{left:73%;width:16%;height:225px;clip-path:polygon(0 0,29% 20%,55% 40%,66% 50%,75% 60%,89% 80%,100% 100%,0 100%);background:linear-gradient(100deg,#f5eedc,#ded2bd)}
-.yacht::before,.yacht::after{content:'';position:absolute;z-index:4;height:1px;background:rgba(82,64,48,.65);transform-origin:left}
-.yacht::before{left:52%;bottom:603px;width:48%;transform:rotate(34deg)}
-.yacht::after{left:52%;bottom:603px;width:47%;transform:rotate(145deg)}
 .bio-note{right:calc(6vw + min(760px,68vw));top:17%}
-@media(max-width:720px){.yacht{right:-18vw;top:30%;width:126vw;height:520px}.mast{height:385px}.mast::before{width:120px}.bio-flag{bottom:484px}.poetry{height:335px}.songs{height:286px}.art{height:181px}.hull{bottom:55px}.hull-line{bottom:133px}.cabin{bottom:137px}.rail{bottom:167px}.bio-note{top:18%;right:7vw}}
+@media(max-width:720px){.yacht{right:-18vw;top:30%;width:126vw;height:520px}.mast{bottom:167px;height:348px}.mast::before{width:120px}.bio-flag{bottom:484px}.poetry{height:335px}.songs{height:286px}.art{height:181px}.hull{bottom:55px}.hull-line{bottom:133px}.cabin{bottom:137px}.rail{bottom:167px}.bio-note{top:18%;right:7vw}}
 
