@@ -3,7 +3,7 @@
 .mast{left:52%;bottom:130px;width:5px;height:478px;background:linear-gradient(#6b4f3b,#4a3527);box-shadow:1px 0 #b49a78}
 .mast::before{content:'';position:absolute;right:1px;bottom:0;width:148px;height:5px;background:linear-gradient(#6b4f3b,#4a3527);border-radius:3px;transform-origin:100% 50%;transform:rotate(2deg);box-shadow:0 2px 3px rgba(20,20,15,.3)}
 .mast::after{content:'';position:absolute;left:-11px;bottom:250px;width:26px;height:3px;background:#4a3527;border-radius:2px}
-.bio-flag{left:calc(52% + 5px);bottom:590px}
+.bio-flag{left:48%;bottom:590px}
 .hull{left:5%;bottom:59px;width:90%;height:88px;background:linear-gradient(#f7f2e8 0 26%,#dfd2bd 26% 31%,#25495a 31% 76%,#173d4d 76%);clip-path:polygon(2% 32%,4% 14%,11% 4%,24% 0,48% 0,71% 2%,87% 9%,97% 27%,100% 44%,93% 61%,79% 81%,59% 95%,39% 100%,21% 97%,8% 83%,0 54%);box-shadow:inset 0 7px #ece0cd,0 10px 20px rgba(13,64,79,.22)}
 .hull::before{content:'';position:absolute;left:19%;top:22%;width:58%;height:6px;background:#c98242;box-shadow:0 13px #e1d6c6}
 .hull::after{content:'';position:absolute;left:46%;bottom:-16px;width:9%;height:20px;background:linear-gradient(#173d4d,#0e2933);clip-path:polygon(20% 0,80% 0,58% 100%,42% 100%);opacity:.9}
@@ -14,9 +14,9 @@
 .sail{bottom:150px;color:#354c4d;filter:drop-shadow(1px 2px 1px rgba(48,45,38,.1));background:linear-gradient(100deg,#faf7ed,#e5dfcf);border:1px solid rgba(105,81,58,.42);transform-origin:bottom center}
 .sail::after{inset:9%;border-color:rgba(89,69,49,.18)}
 .sail:hover,.sail:focus-visible{transform:scale(1.025);filter:brightness(1.04) drop-shadow(1px 2px 1px rgba(48,45,38,.1))}
-.poetry{left:9%;width:38%;height:415px;clip-path:polygon(100% 0,100% 100%,0 100%)}
-.songs{left:49%;width:26%;height:355px;clip-path:polygon(0 0,100% 100%,0 100%)}
-.art{left:73%;width:16%;height:225px;clip-path:polygon(0 0,100% 100%,0 100%);background:linear-gradient(100deg,#f5eedc,#ded2bd)}
+.poetry{left:9%;width:38%;height:415px;clip-path:polygon(100% 0,71% 20%,45% 40%,34% 50%,25% 60%,11% 80%,0 100%,100% 100%)}
+.songs{left:49%;width:26%;height:355px;clip-path:polygon(0 0,29% 20%,55% 40%,66% 50%,75% 60%,89% 80%,100% 100%,0 100%)}
+.art{left:73%;width:16%;height:225px;clip-path:polygon(0 0,29% 20%,55% 40%,66% 50%,75% 60%,89% 80%,100% 100%,0 100%);background:linear-gradient(100deg,#f5eedc,#ded2bd)}
 .yacht::before,.yacht::after{content:'';position:absolute;z-index:4;height:1px;background:rgba(82,64,48,.65);transform-origin:left}
 .yacht::before{left:52%;bottom:603px;width:48%;transform:rotate(34deg)}
 .yacht::after{left:52%;bottom:603px;width:47%;transform:rotate(145deg)}
