@@ -1,0 +1,25 @@
+/* Classic sailing-yacht proportions inspired by the supplied reference. */
+.yacht{right:6vw;top:16%;width:min(760px,68vw);height:620px;transform-origin:53% 92%;animation-duration:6.5s}
+.mast{left:52%;bottom:130px;width:5px;height:478px;background:linear-gradient(#6b4f3b,#4a3527);box-shadow:1px 0 #b49a78}
+.mast::before{content:'';position:absolute;right:1px;bottom:0;width:148px;height:5px;background:linear-gradient(#6b4f3b,#4a3527);border-radius:3px;transform-origin:100% 50%;transform:rotate(2deg);box-shadow:0 2px 3px rgba(20,20,15,.3)}
+.mast::after{content:'';position:absolute;left:-11px;bottom:250px;width:26px;height:3px;background:#4a3527;border-radius:2px}
+.bio-flag{left:calc(52% + 5px);bottom:590px}
+.hull{left:5%;bottom:59px;width:90%;height:88px;background:linear-gradient(#f7f2e8 0 26%,#dfd2bd 26% 31%,#25495a 31% 76%,#173d4d 76%);clip-path:polygon(2% 32%,4% 14%,11% 4%,24% 0,48% 0,71% 2%,87% 9%,97% 27%,100% 44%,93% 61%,79% 81%,59% 95%,39% 100%,21% 97%,8% 83%,0 54%);box-shadow:inset 0 7px #ece0cd,0 10px 20px rgba(13,64,79,.22)}
+.hull::before{content:'';position:absolute;left:19%;top:22%;width:58%;height:6px;background:#c98242;box-shadow:0 13px #e1d6c6}
+.hull::after{content:'';position:absolute;left:46%;bottom:-16px;width:9%;height:20px;background:linear-gradient(#173d4d,#0e2933);clip-path:polygon(20% 0,80% 0,58% 100%,42% 100%);opacity:.9}
+.hull-line{left:10%;bottom:141px;width:80%;border-top:2px solid #5e4734}
+.cabin{bottom:146px;left:38%;width:22%;height:34px;padding:9px 11px;border-radius:16px 16px 0 0}
+.cabin i{width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#bfe4ec,#4c7f8f 65%,#2c5361);box-shadow:0 0 0 2px #e7dcc7}
+.rail{bottom:180px;left:19%;width:63%;height:15px;border-color:#d9cbbb}
+.sail{bottom:150px;color:#354c4d;filter:drop-shadow(1px 2px 1px rgba(48,45,38,.1));background:linear-gradient(100deg,#faf7ed,#e5dfcf);border:1px solid rgba(105,81,58,.42);transform-origin:bottom center}
+.sail::after{inset:9%;border-color:rgba(89,69,49,.18)}
+.sail:hover,.sail:focus-visible{transform:scale(1.025);filter:brightness(1.04) drop-shadow(1px 2px 1px rgba(48,45,38,.1))}
+.poetry{left:9%;width:38%;height:415px;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.songs{left:49%;width:26%;height:355px;clip-path:polygon(0 0,100% 100%,0 100%)}
+.art{left:73%;width:16%;height:225px;clip-path:polygon(0 0,100% 100%,0 100%);background:linear-gradient(100deg,#f5eedc,#ded2bd)}
+.yacht::before,.yacht::after{content:'';position:absolute;z-index:4;height:1px;background:rgba(82,64,48,.65);transform-origin:left}
+.yacht::before{left:52%;bottom:603px;width:48%;transform:rotate(34deg)}
+.yacht::after{left:52%;bottom:603px;width:47%;transform:rotate(145deg)}
+.bio-note{right:calc(6vw + min(760px,68vw));top:17%}
+@media(max-width:720px){.yacht{right:-18vw;top:30%;width:126vw;height:520px}.mast{height:385px}.mast::before{width:120px}.bio-flag{bottom:484px}.poetry{height:335px}.songs{height:286px}.art{height:181px}.hull{bottom:55px}.hull-line{bottom:133px}.cabin{bottom:137px}.rail{bottom:167px}.bio-note{top:18%;right:7vw}}
+

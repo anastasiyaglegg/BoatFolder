@@ -1,0 +1,28 @@
+/* Sail readability layer — loads last, so it is the final word on sail text.
+   Labels run vertically along the sail (writing-mode) instead of being
+   crammed sideways into a narrow triangle, and stay clearly legible. */
+.sail{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+}
+.sail span{
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  font-family:var(--font-mono,'DM Mono',monospace);
+  font-weight:500;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  line-height:1.15;
+  white-space:normal;
+}
+.poetry span{font-size:clamp(15px,1.7vw,22px)}
+.songs span{font-size:clamp(14px,1.5vw,19px)}
+.art span{font-size:clamp(12px,1.15vw,15px)}
+
+@media(max-width:720px){
+  .poetry span{font-size:14px}
+  .songs span{font-size:13px}
+  .art span{font-size:11px}
+}

@@ -1,0 +1,74 @@
+/* Styling for the native <dialog> that opens when a sail is clicked.
+   Palette and card treatment mirror .bio-note in voyage.css so it reads
+   as part of the same voyage scene rather than a generic browser modal. */
+
+.sail-dialog {
+  border: none;
+  border-radius: 4px;
+  padding: 32px 36px;
+  width: min(400px, 86vw);
+  background: rgba(247, 242, 231, .97);
+  color: #294754;
+  box-shadow: 0 20px 60px rgba(15, 40, 50, .28);
+  font-family: var(--font-body, 'Fraunces', Georgia, serif);
+}
+
+.sail-dialog[open] {
+  animation: dialog-in .25s ease both;
+}
+
+.sail-dialog::backdrop {
+  background: rgba(22, 48, 58, .55);
+  animation: backdrop-in .25s ease both;
+}
+
+.sail-dialog .eyebrow {
+  color: #4c7f8f;
+}
+
+.sail-dialog h2 {
+  font-family: var(--font-display, 'Yuyu', 'Fraunces', Georgia, serif);
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 0 0 12px;
+}
+
+.sail-dialog p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  color: #22424d;
+}
+
+.dialog-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dialog-close:hover,
+.dialog-close:focus-visible {
+  color: #4c7f8f;
+  outline: none;
+}
+
+@keyframes dialog-in {
+  from { opacity: 0; transform: translateY(10px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 720px) {
+  .sail-dialog {
+    padding: 26px 24px;
+  }
+}
