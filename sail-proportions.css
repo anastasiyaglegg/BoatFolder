@@ -17,9 +17,9 @@
   line-height:1.15;
   white-space:normal;
 }
-.poetry span{font-size:clamp(15px,1.7vw,22px)}
-.songs span{font-size:clamp(14px,1.5vw,19px)}
-.art span{font-size:clamp(12px,1.15vw,15px)}
+.poetry span{font-size:clamp(15px,1.7vw,22px);margin-top:110px;margin-left:25px}
+.songs span{font-size:clamp(14px,1.5vw,19px);margin-left:-15px}
+.art span{font-size:clamp(12px,1.15vw,15px);margin-top:20px;margin-left:-15px}
 
 @media(max-width:720px){
   .poetry span{font-size:14px}
