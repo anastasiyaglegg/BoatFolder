@@ -40,6 +40,13 @@
       <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div><div class="cloud cloud-three" aria-hidden="true"></div>
       <div class="gulls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="ocean" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="lighthouse">
+        <div class="lh-beam" aria-hidden="true"></div>
+        <div class="lh-lantern" aria-hidden="true"></div>
+        <div class="lh-tower" aria-hidden="true"></div>
+        <a class="lh-sign" href="#vision" data-title="Vision">Vision</a>
+        <div class="lh-rocks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
       <div class="yacht" aria-label="A gently rocking yacht. Choose a sail to explore.">
         <button class="bio-flag" type="button" aria-expanded="false">Bio</button><div class="mast"></div><div class="cabin"><i></i><i></i><i></i></div><div class="rail"></div><div class="hull"></div><div class="hull-line"></div>
         <a class="sail poetry" href="#poetry-publications" data-title="Poetry and Publications"><span>Poetry and<br>Publications</span></a>
@@ -52,6 +59,6 @@
     </section>
     <dialog class="sail-dialog" id="sail-dialog"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">Portfolio section</p><h2 id="dialog-title"></h2><p>This collection is being prepared.</p></dialog>
   </main>
-  <script>const dialog=document.querySelector('#sail-dialog');document.querySelectorAll('.sail').forEach(sail=>sail.addEventListener('click',event=>{event.preventDefault();document.querySelector('#dialog-title').textContent=sail.dataset.title;dialog.showModal();}));document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());const bio=document.querySelector('#bio-note'),flag=document.querySelector('.bio-flag');flag.addEventListener('click',()=>{bio.classList.toggle('open');flag.setAttribute('aria-expanded',bio.classList.contains('open'));});document.querySelector('.bio-close').addEventListener('click',()=>{bio.classList.remove('open');flag.setAttribute('aria-expanded','false');});</script>
+  <script>const dialog=document.querySelector('#sail-dialog');document.querySelectorAll('.sail, .lh-sign').forEach(sail=>sail.addEventListener('click',event=>{event.preventDefault();document.querySelector('#dialog-title').textContent=sail.dataset.title;dialog.showModal();}));document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());const bio=document.querySelector('#bio-note'),flag=document.querySelector('.bio-flag');flag.addEventListener('click',()=>{bio.classList.toggle('open');flag.setAttribute('aria-expanded',bio.classList.contains('open'));});document.querySelector('.bio-close').addEventListener('click',()=>{bio.classList.remove('open');flag.setAttribute('aria-expanded','false');});</script>
 </body>
 </html>
