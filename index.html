@@ -7,22 +7,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Lobster+Two&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
   <link rel="stylesheet" href="voyage.css?v=2">
   <link rel="stylesheet" href="dialog.css">
-  <link rel="stylesheet" href="voyage-details.css">
+  <link rel="stylesheet" href="voyage-details.css?v=2">
   <link rel="stylesheet" href="real-yacht.css">
-  <link rel="stylesheet" href="sail-proportions.css">
+  <link rel="stylesheet" href="sail-proportions.css?v=5">
 </head>
 <body>
   <main>
     <section class="intro-page" aria-labelledby="intro-title" id="top">
-      <nav><a class="monogram" href="#top" aria-label="Home">AG</a><a href="#voyage">Set Sail &darr;</a></nav>
+      <nav class="intro-nav"><a href="#voyage">Set Sail &darr;</a></nav>
       <div class="intro-content">
         <p class="eyebrow">Portfolio / 2026</p>
         <h1 id="intro-title">Anastasiya Glegg</h1>
-        <p class="role">Creative problem solver · Writer · Artist · Songwriter</p>
-        <p class="builder">Builder of thoughtful experiences through creativity, curiosity, and analytical thinking.</p>
+        <p class="role">Creative problem solver · Writer · Artist</p>
+        <p class="builder">Native AI Builder of thoughtful experiences through creativity, curiosity, and analytical thinking.</p>
         <div class="balloon-sky" aria-hidden="false">
           <div class="balloon-cloud c1"></div><div class="balloon-cloud c2"></div><div class="balloon-cloud c3"></div>
           <div class="balloon">
@@ -36,7 +36,7 @@
       <a class="scroll-cue" href="#voyage">Set sail <span>&darr;</span></a>
     </section>
     <section class="voyage-page" id="voyage" aria-labelledby="voyage-title">
-      <header class="voyage-copy"><p class="eyebrow">Choose a direction</p><h2 id="voyage-title">A little<br>voyage</h2><p>Each sail opens a different part of my creative world.</p></header>
+      <header class="voyage-copy"><h2 id="voyage-title">A little voyage</h2><p>Follow a sail into another current of my creative world.</p></header>
       <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div><div class="cloud cloud-three" aria-hidden="true"></div>
       <div class="gulls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="ocean" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -49,13 +49,11 @@
       </div>
       <div class="yacht" aria-label="A gently rocking yacht. Choose a sail to explore.">
         <button class="bio-flag" type="button" aria-expanded="false">Bio</button><div class="mast"></div><div class="cabin"><i></i><i></i><i></i></div><div class="rail"></div><div class="hull"></div><div class="hull-line"></div>
-        <a class="sail poetry" href="#poetry-publications" data-title="Poetry and Publications"><span>Poetry and<br>Publications</span></a>
-        <a class="sail songs" href="#projects" data-title="Projects" data-template="projects-template"><span>Projects</span></a>
-        <a class="sail art" href="#experience" data-title="Experience"><span>Experience</span></a>
+        <a class="sail poetry" href="#projects" data-title="Projects" data-template="projects-template" aria-label="Projects"><span class="letter-stack projects-stack" aria-hidden="true">P<br>R<br>O<br>J<br>E<br>C<br>T<br>S</span></a>
+        <a class="sail songs" href="#poetry-publications" data-title="Poetry and Publications" aria-label="Poetry and Publications"><span class="letter-stack poetry-stack" aria-hidden="true">P<br>O<br>E<br>T<br>R<br>Y</span></a>
+        <a class="sail art" href="#art" data-title="Art" aria-label="Art"><span class="letter-stack art-stack" aria-hidden="true">A<br>R<br>T</span></a>
       </div>
       <aside class="bio-note" id="bio-note" aria-live="polite"><button class="bio-close" type="button" aria-label="Close bio">×</button><p class="eyebrow">About me</p><p>I’m Anastasiya: a creative problem solver who brings together writing, art, music, curiosity, and thoughtful use of technology to make ideas feel clear and human.</p></aside>
-      <p class="sail-hint">Tap a sail to explore</p>
-      <a class="back-link voyage-back" href="#top">&uarr; Back to the beginning</a>
     </section>
     <template id="projects-template">
       <div class="project-list">
