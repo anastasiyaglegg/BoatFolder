@@ -1,6 +1,4 @@
-/* Sail readability layer — loads last, so it is the final word on sail text.
-   Labels run vertically along the sail (writing-mode) instead of being
-   crammed sideways into a narrow triangle, and stay clearly legible. */
+/* Sail readability layer — loads last, so it is the final word on sail text. */
 .sail{
   display:flex;
   align-items:center;
@@ -10,19 +8,51 @@
 .sail span{
   writing-mode:vertical-rl;
   text-orientation:mixed;
-  font-family:var(--font-mono,'DM Mono',monospace);
-  font-weight:500;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  line-height:1.15;
+  font-family:var(--font-display,'Lobster Two','Fraunces',serif);
+  font-weight:400;
+  letter-spacing:.035em;
+  text-transform:none;
+  line-height:1.25;
   white-space:normal;
+  color:#203f49;
+  text-shadow:0 1px 0 rgba(255,255,255,.9);
 }
-.poetry span{font-size:clamp(15px,1.7vw,22px);margin-top:110px;margin-left:25px}
-.songs span{font-size:clamp(14px,1.5vw,19px);margin-left:-15px}
-.art span{font-size:clamp(12px,1.15vw,15px);margin-top:20px;margin-left:-15px}
+.sail .letter-stack{
+  writing-mode:horizontal-tb !important;
+  text-orientation:mixed;
+  letter-spacing:0;
+  text-align:center;
+  border-radius:0;
+  background:transparent;
+}
+.poetry .projects-stack{
+  font-size:clamp(17px,1.8vw,24px);
+  line-height:.97;
+  margin-top:112px;
+  margin-left:28px;
+  padding:9px 12px;
+}
+.songs .poetry-stack{
+  position:absolute;
+  left:35%;
+  top:66%;
+  transform:translate(-50%,-50%);
+  font-size:clamp(17px,1.65vw,22px);
+  line-height:1;
+  padding:0;
+}
+.art .art-stack{
+  position:absolute;
+  left:35%;
+  top:66%;
+  transform:translate(-50%,-50%);
+  font-size:clamp(17px,1.5vw,21px);
+  line-height:1.03;
+  padding:0;
+}
 
 @media(max-width:720px){
-  .poetry span{font-size:14px}
-  .songs span{font-size:13px}
-  .art span{font-size:11px}
+  .poetry .projects-stack{font-size:15px;margin-top:78px;margin-left:20px;padding:7px 10px}
+  .songs .poetry-stack{font-size:15px}
+  .art .art-stack{font-size:15px}
 }

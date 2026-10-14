@@ -1,3 +1,28 @@
 .voyage-page{background:linear-gradient(#b9d7df 0 50%,#4c91a7 50% 100%)}
 .voyage-copy h2{color:#16303a;text-shadow:0 1px 0 rgba(255,255,255,.35)}
 .voyage-copy p:not(.eyebrow){color:#22424d;font-weight:500}.ocean{inset:50% 0 0;background:linear-gradient(180deg,rgba(255,255,255,.13),transparent 13%),repeating-radial-gradient(ellipse at 34% 0,rgba(232,249,247,.45) 0 1px,transparent 2px 25px);animation:sea-shift 9s ease-in-out infinite}.ocean::before,.ocean::after{content:'';position:absolute;inset:7% -10% 0;background:repeating-linear-gradient(176deg,transparent 0 30px,rgba(228,247,246,.32) 31px 33px,transparent 35px 64px);opacity:.66;animation:water-roll 11s linear infinite}.ocean::after{inset:26% -10% 0;opacity:.35;animation-direction:reverse;animation-duration:15s}.ocean span{width:30vw;border-top-color:rgba(255,255,255,.55);filter:blur(.2px)}.yacht{right:7vw;top:23%;width:min(690px,65vw);height:555px;animation-duration:6s}.mast{bottom:116px;height:390px;width:9px}.hull{bottom:50px;height:112px;width:76%;left:11%;clip-path:polygon(0 0,100% 0,89% 61%,57% 100%,24% 95%,7% 68%);box-shadow:inset 0 -13px #d0c1b0,0 12px 18px rgba(21,67,84,.18)}.hull-line{bottom:119px;left:15%;width:68%}.cabin{position:absolute;bottom:160px;left:34%;width:32%;height:57px;background:#f7f2e7;border-radius:34px 34px 0 0;border-bottom:4px solid #c6b8a8;display:flex;gap:9px;padding:17px 16px}.cabin i{display:block;width:25%;height:17px;border-radius:10px;background:#507f91}.rail{position:absolute;bottom:214px;left:22%;width:54%;height:21px;border-top:2px solid #f7f2e7;border-left:2px solid #f7f2e7;border-right:2px solid #f7f2e7}.bio-flag{position:absolute;z-index:5;left:calc(51% + 7px);bottom:493px;border:0;padding:5px 13px 5px 9px;background:#f2d59b;color:#284856;font:500 11px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;clip-path:polygon(0 0,100% 0,82% 50%,100% 100%,0 100%)}.bio-flag:hover,.bio-flag:focus-visible{background:#fff1c7}.bio-note{position:absolute;z-index:4;right:calc(7vw + min(690px,65vw));top:22%;width:min(350px,35vw);margin:0;padding:24px 28px;background:rgba(247,242,231,.94);color:#294754;box-shadow:0 14px 40px rgba(37,82,98,.16);opacity:0;pointer-events:none;transform:translateY(10px);transition:.3s}.bio-note.open{opacity:1;pointer-events:auto;transform:translateY(0)}.bio-note p:not(.eyebrow){font-size:16px;line-height:1.5;margin:0}.bio-close{position:absolute;right:8px;top:5px;border:0;background:none;color:inherit;font-size:22px;cursor:pointer}.cloud{position:absolute;z-index:1;width:122px;height:28px;background:rgba(255,255,255,.6);border-radius:40px;filter:blur(.3px);animation:cloud-drift 30s linear infinite}.cloud::before,.cloud::after{content:'';position:absolute;bottom:0;background:inherit;border-radius:50%}.cloud::before{width:55px;height:55px;left:20px}.cloud::after{width:71px;height:71px;left:50px}.cloud-one{top:15%;right:35%;transform:scale(.72);animation-delay:-7s}.cloud-two{top:9%;right:7%;transform:scale(1.18);animation-delay:-14s}.cloud-three{top:35%;left:7%;transform:scale(.52);animation-delay:-22s}.gulls i{position:absolute;z-index:2;width:18px;height:9px;border-top:2px solid rgba(39,72,83,.72);border-radius:50%;animation:gull-float 5s ease-in-out infinite}.gulls i::after{content:'';position:absolute;width:18px;height:9px;left:15px;top:-2px;border-top:2px solid rgba(39,72,83,.72);border-radius:50%;transform:rotate(7deg)}.gulls i:nth-child(1){top:13%;left:42%}.gulls i:nth-child(2){top:21%;left:51%;transform:scale(.8);animation-delay:-1s}.gulls i:nth-child(3){top:28%;right:18%;transform:scale(.6);animation-delay:-2s}.gulls i:nth-child(4){top:39%;right:8%;transform:scale(.85);animation-delay:-3s}.gulls i:nth-child(5){top:11%;right:23%;transform:scale(.55);animation-delay:-4s}.gulls i:nth-child(6){top:33%;left:33%;transform:scale(.7);animation-delay:-1.7s}@keyframes sea-shift{50%{background-position:0 7px,70px 20px}}@keyframes water-roll{to{transform:translateX(115px)}}@keyframes cloud-drift{50%{transform:translateX(-48px) scale(var(--scale,1))}}@keyframes gull-float{50%{margin-top:-11px;margin-left:18px}}@media(max-width:720px){.yacht{top:39%;right:-15vw;width:112vw;height:440px}.mast{height:298px}.bio-flag{bottom:382px}.cabin{bottom:135px}.rail{bottom:180px}.hull-line{bottom:102px}.bio-note{right:7vw;top:31%;width:min(330px,80vw)}.cloud-two{right:-9%}.cloud-one{right:30%}.gulls i:nth-child(3),.gulls i:nth-child(5){display:none}}
+
+.voyage-copy{
+  position:absolute;
+  z-index:3;
+  top:5vh;
+  left:16vw;
+  width:min(320px,42vw);
+  padding:0;
+}
+.voyage-copy h2{
+  font-size:clamp(38px,4.2vw,52px);
+  white-space:nowrap;
+}
+.voyage-copy p:not(.eyebrow){
+  max-width:280px;
+  margin:14px 0 0;
+  font-size:clamp(14px,1.5vw,17px);
+  line-height:1.4;
+}
+
+@media(max-width:720px){
+  .voyage-copy{top:4vh;left:7vw;width:70vw;padding:0}
+  .voyage-copy h2{font-size:clamp(34px,10vw,48px)}
+  .voyage-copy p:not(.eyebrow){max-width:250px;font-size:14px}
+}
