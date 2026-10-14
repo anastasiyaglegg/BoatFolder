@@ -15,9 +15,10 @@
 .balloon-cloud.c3{width:44px;height:16px;top:76%;left:-18%;animation-duration:29s;animation-delay:-19s}.balloon-cloud.c3::before{width:24px;height:24px;top:-12px;left:5px}.balloon-cloud.c3::after{width:18px;height:18px;top:-7px;left:24px}
 .balloon{position:absolute;left:50%;top:5%;width:58%;animation:balloon-float 9s ease-in-out infinite}
 .balloon-envelope{position:relative;width:100%;aspect-ratio:1/1.15;border-radius:50% 50% 46% 46%/62% 62% 38% 38%;overflow:hidden;background:#dad7cc;box-shadow:0 16px 22px rgba(33,50,40,.2);display:grid;place-items:center}
-.balloon-envelope img{grid-area:1/1;width:100%;height:100%;object-fit:cover;display:block}
+.balloon-envelope img{position:relative;z-index:1;grid-area:1/1;width:100%;height:100%;object-fit:cover;object-position:50% 24%;display:block}
 .balloon-envelope::after{content:'';position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% -30%,transparent 0 7.5deg,rgba(33,50,40,.14) 7.5deg 8.5deg);mix-blend-mode:multiply;pointer-events:none}
 .balloon-envelope .portrait-note{grid-area:1/1;font:11px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.1em;color:#667069;text-align:center;padding:0 12%}
+.balloon-envelope img + .portrait-note{display:none}
 .balloon-ropes{display:block;width:100%;height:38px}
 .balloon-ropes line{stroke:#5d422b;stroke-width:1px;vector-effect:non-scaling-stroke}
 .balloon-basket{width:44%;margin:0 auto;height:42px;background-image:linear-gradient(180deg,#8a6242,#5d422b),repeating-linear-gradient(90deg,rgba(255,255,255,.1) 0 2px,transparent 2px 7px);clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);box-shadow:inset 0 -6px rgba(0,0,0,.2)}

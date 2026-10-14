@@ -7,6 +7,8 @@
   border-radius: 4px;
   padding: 32px 36px;
   width: min(400px, 86vw);
+  max-height: 78vh;
+  overflow-y: auto;
   background: rgba(247, 242, 231, .97);
   color: #294754;
   box-shadow: 0 20px 60px rgba(15, 40, 50, .28);
@@ -37,6 +39,43 @@
   line-height: 1.5;
   margin: 0;
   color: #22424d;
+}
+
+.project-list {
+  display: grid;
+  gap: 18px;
+}
+
+.project-item {
+  padding-top: 16px;
+  border-top: 1px solid rgba(76, 127, 143, .25);
+}
+
+.project-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.project-item h3 {
+  margin: 0 0 5px;
+  color: #22424d;
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 21px;
+}
+
+.project-item a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #346b7c;
+  font: 500 12px 'DM Mono', monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
 }
 
 .dialog-close {

@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Lobster+Two&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="voyage.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="voyage.css?v=2">
   <link rel="stylesheet" href="dialog.css">
   <link rel="stylesheet" href="voyage-details.css">
   <link rel="stylesheet" href="real-yacht.css">
@@ -26,7 +26,7 @@
         <div class="balloon-sky" aria-hidden="false">
           <div class="balloon-cloud c1"></div><div class="balloon-cloud c2"></div><div class="balloon-cloud c3"></div>
           <div class="balloon">
-            <div class="balloon-envelope"><img src="portrait-placeholder.jpg" alt="Portrait of Anastasiya Glegg" onerror="this.hidden=true"><span class="portrait-note">Your photo goes here</span></div>
+            <div class="balloon-envelope"><img src="portrait.jpg?v=2" alt="Portrait of Anastasiya Glegg"><span class="portrait-note" aria-hidden="true">Your photo goes here</span></div>
             <svg class="balloon-ropes" viewBox="0 0 100 38" preserveAspectRatio="none" aria-hidden="true"><line x1="25" y1="0" x2="32" y2="38"/><line x1="40" y1="0" x2="32" y2="38"/><line x1="60" y1="0" x2="68" y2="38"/><line x1="75" y1="0" x2="68" y2="38"/></svg>
             <div class="balloon-basket"></div>
           </div>
@@ -44,21 +44,28 @@
         <div class="lh-beam" aria-hidden="true"></div>
         <div class="lh-lantern" aria-hidden="true"></div>
         <div class="lh-tower" aria-hidden="true"></div>
-        <a class="lh-sign" href="#vision" data-title="Vision">Vision</a>
+        <a class="lh-sign" href="#vision" data-title="Vision" data-copy="I follow the small, bright questions—the ones that flicker just beyond the known map and whisper that there is always another horizon waiting to be imagined. My vision is to sail toward those distant edges, where new concepts rise like curious islands from the mist, ideas grow fins, and impossible notions discover they have had wings all along. I believe creativity is its own kind of compass: it may not point north, but it leads toward wonder, connection, and ways of seeing the world that did not exist yesterday. Imagination fills the sails, curiosity keeps watch beneath the stars, and every unexpected current becomes an invitation to explore. The lighthouse is not the end of the journey; it is a warm wink across the water—a guiding symbol for every wandering thought, reminding me that discovery begins wherever we dare to make a little light of our own.">Vision</a>
         <div class="lh-rocks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="yacht" aria-label="A gently rocking yacht. Choose a sail to explore.">
         <button class="bio-flag" type="button" aria-expanded="false">Bio</button><div class="mast"></div><div class="cabin"><i></i><i></i><i></i></div><div class="rail"></div><div class="hull"></div><div class="hull-line"></div>
         <a class="sail poetry" href="#poetry-publications" data-title="Poetry and Publications"><span>Poetry and<br>Publications</span></a>
-        <a class="sail songs" href="#ai-projects" data-title="AI Projects"><span>AI<br>Projects</span></a>
+        <a class="sail songs" href="#projects" data-title="Projects" data-template="projects-template"><span>Projects</span></a>
         <a class="sail art" href="#experience" data-title="Experience"><span>Experience</span></a>
       </div>
       <aside class="bio-note" id="bio-note" aria-live="polite"><button class="bio-close" type="button" aria-label="Close bio">×</button><p class="eyebrow">About me</p><p>I’m Anastasiya: a creative problem solver who brings together writing, art, music, curiosity, and thoughtful use of technology to make ideas feel clear and human.</p></aside>
       <p class="sail-hint">Tap a sail to explore</p>
       <a class="back-link voyage-back" href="#top">&uarr; Back to the beginning</a>
     </section>
-    <dialog class="sail-dialog" id="sail-dialog"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">Portfolio section</p><h2 id="dialog-title"></h2><p>This collection is being prepared.</p></dialog>
+    <template id="projects-template">
+      <div class="project-list">
+        <article class="project-item"><h3>Warning Signs</h3><p>An interactive project for noticing, understanding, and responding to warning signs.</p><a href="https://warning-signs.vercel.app/" target="_blank" rel="noreferrer">Visit project ↗</a></article>
+        <article class="project-item"><h3>Recruitator</h3><p>A thoughtful recruiting workspace designed to make coordination clearer and more human.</p><a href="https://recruitator.vercel.app/" target="_blank" rel="noreferrer">Visit project ↗</a></article>
+        <article class="project-item"><h3>Riverside Bookstore</h3><p>One connected bookstore experience, bringing together the customer shop, staff operations, and the technology working quietly behind the shelves.</p><div class="project-actions"><a href="https://riverside-customer-app.vercel.app/" target="_blank" rel="noreferrer">Visit the bookstore ↗</a><a href="https://riverside-staff-dashboard.vercel.app/" target="_blank" rel="noreferrer">View staff dashboard ↗</a></div></article>
+      </div>
+    </template>
+    <dialog class="sail-dialog" id="sail-dialog"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">Portfolio section</p><h2 id="dialog-title"></h2><div id="dialog-content"><p>This collection is being prepared.</p></div></dialog>
   </main>
-  <script>const dialog=document.querySelector('#sail-dialog');document.querySelectorAll('.sail, .lh-sign').forEach(sail=>sail.addEventListener('click',event=>{event.preventDefault();document.querySelector('#dialog-title').textContent=sail.dataset.title;dialog.showModal();}));document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());const bio=document.querySelector('#bio-note'),flag=document.querySelector('.bio-flag');flag.addEventListener('click',()=>{bio.classList.toggle('open');flag.setAttribute('aria-expanded',bio.classList.contains('open'));});document.querySelector('.bio-close').addEventListener('click',()=>{bio.classList.remove('open');flag.setAttribute('aria-expanded','false');});</script>
+  <script>const dialog=document.querySelector('#sail-dialog'),dialogContent=document.querySelector('#dialog-content'),placeholder='This collection is being prepared.';document.querySelectorAll('.sail, .lh-sign').forEach(sail=>sail.addEventListener('click',event=>{event.preventDefault();document.querySelector('#dialog-title').textContent=sail.dataset.title;dialogContent.replaceChildren();const template=sail.dataset.template&&document.querySelector(`#${sail.dataset.template}`);if(template){dialogContent.append(template.content.cloneNode(true));}else{const copy=document.createElement('p');copy.textContent=sail.dataset.copy||placeholder;dialogContent.append(copy);}dialog.showModal();}));document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());const bio=document.querySelector('#bio-note'),flag=document.querySelector('.bio-flag');flag.addEventListener('click',()=>{bio.classList.toggle('open');flag.setAttribute('aria-expanded',bio.classList.contains('open'));});document.querySelector('.bio-close').addEventListener('click',()=>{bio.classList.remove('open');flag.setAttribute('aria-expanded','false');});</script>
 </body>
 </html>
