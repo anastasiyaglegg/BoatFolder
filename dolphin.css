@@ -1,0 +1,104 @@
+/* A foreground visitor. The clipped air layer lets the dolphin submerge. */
+.dolphin-playground {
+  position: absolute;
+  z-index: 3;
+  left: 2%;
+  bottom: 0;
+  width: clamp(200px, 34vw, 420px);
+  aspect-ratio: 2 / 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dolphin-air {
+  position: absolute;
+  inset: 0 0 22%;
+  overflow: hidden;
+}
+
+.leaping-dolphin {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  left: 0;
+  top: 115%;
+  transform-origin: 55% 55%;
+  animation: dolphin-leap 9s linear infinite;
+}
+
+@keyframes dolphin-leap {
+  0%, 7% { left: 0; top: 115%; transform: rotate(-42deg); }
+  15% { left: 10%; top: 55%; transform: rotate(-32deg); }
+  24% { left: 23%; top: 17%; transform: rotate(-18deg); }
+  32% { left: 36%; top: 7%; transform: rotate(0deg); }
+  40% { left: 49%; top: 20%; transform: rotate(18deg); }
+  49% { left: 62%; top: 62%; transform: rotate(38deg); }
+  57%, 100% { left: 72%; top: 120%; transform: rotate(55deg); }
+}
+
+.dolphin-splash {
+  position: absolute;
+  top: 78%;
+  width: 20%;
+  height: 24px;
+  color: #d5efed;
+}
+
+.splash-takeoff { left: 2%; --splash-delay: .8s; }
+.splash-landing { left: 74%; --splash-delay: 4.65s; }
+
+.dolphin-splash span {
+  position: absolute;
+  inset: -3px 0 auto;
+  height: 12px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  animation: dolphin-ripple 9s ease-out infinite var(--splash-delay);
+}
+
+.dolphin-splash i {
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  width: 3px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  --spray-x: -18px;
+  --spray-y: -18px;
+  animation: dolphin-spray 9s ease-out infinite var(--splash-delay);
+}
+
+.dolphin-splash i:nth-child(2) { --spray-x: -7px; --spray-y: -28px; }
+.dolphin-splash i:nth-child(3) { --spray-x: 9px; --spray-y: -23px; }
+.dolphin-splash i:nth-child(4) { --spray-x: 22px; --spray-y: -14px; }
+
+@keyframes dolphin-ripple {
+  0% { opacity: 0; transform: scale(.3); }
+  2% { opacity: .8; }
+  16%, 100% { opacity: 0; transform: scale(1.6); }
+}
+
+@keyframes dolphin-spray {
+  0% { opacity: 0; transform: translate(0, 0); }
+  1% { opacity: .9; }
+  5% { opacity: .8; transform: translate(var(--spray-x), var(--spray-y)) rotate(20deg); }
+  10%, 100% { opacity: 0; transform: translate(var(--spray-x), 6px) rotate(35deg); }
+}
+
+@media (max-width: 720px) {
+  .dolphin-playground { width: clamp(190px, 43vw, 260px); left: 1%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaping-dolphin {
+    animation: none;
+    left: 35%;
+    top: 78%;
+    transform: rotate(-8deg);
+  }
+  .dolphin-splash i { animation: none; }
+  .dolphin-splash span { animation: none; }
+}

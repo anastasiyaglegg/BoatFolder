@@ -13,33 +13,91 @@
   <link rel="stylesheet" href="voyage-details.css?v=2">
   <link rel="stylesheet" href="real-yacht.css">
   <link rel="stylesheet" href="sail-proportions.css?v=5">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="stylesheet" href="balloon.css">
+  <link rel="stylesheet" href="dolphin.css">
+  <meta name="description" content="Explore Anastasiya Glegg’s projects, writing, and art. Thoughtful experiences shaped by creativity, curiosity, and technology.">
 </head>
 <body>
   <main>
     <section class="intro-page" aria-labelledby="intro-title" id="top">
-      <nav class="intro-nav"><a href="#voyage">Set Sail &darr;</a></nav>
+      <a class="skip-link" href="#projects">Skip to projects</a>
+      <nav class="intro-nav" aria-label="Main navigation"><a class="wordmark" href="#top">AG<span> / A creative voyage</span></a><div class="nav-links"><a href="#projects">Projects</a><a href="#voyage">Explore</a><a href="mailto:anastasiyaglegg@gmail.com">Say hello <span aria-hidden="true">↗</span></a></div></nav>
       <div class="intro-content">
-        <p class="eyebrow">Portfolio / 2026</p>
+        <div class="intro-text"><p class="eyebrow">Independent mind. Creative spirit.</p>
         <h1 id="intro-title">Anastasiya Glegg</h1>
-        <p class="role">Creative problem solver · Writer · Artist</p>
-        <p class="builder">Native AI Builder of thoughtful experiences through creativity, curiosity, and analytical thinking.</p>
-        <div class="balloon-sky" aria-hidden="false">
+        <p class="role">AI-native builder · Writer · Artist</p>
+        <p class="builder">I bring a writer’s imagination and a practical curiosity to building thoughtful digital experiences with AI.</p>
+        <div class="hero-actions"><a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="#voyage">Take a little voyage <span aria-hidden="true">↓</span></a></div>
+        <div class="contact"><a href="mailto:anastasiyaglegg@gmail.com">anastasiyaglegg@gmail.com</a><span>New York, NY</span></div></div>
+        <div class="portrait-scene"><div class="balloon-sky" aria-hidden="false">
           <div class="balloon-cloud c1"></div><div class="balloon-cloud c2"></div><div class="balloon-cloud c3"></div>
-          <div class="balloon">
-            <div class="balloon-envelope"><img src="portrait.jpg?v=2" alt="Portrait of Anastasiya Glegg"><span class="portrait-note" aria-hidden="true">Your photo goes here</span></div>
-            <svg class="balloon-ropes" viewBox="0 0 100 38" preserveAspectRatio="none" aria-hidden="true"><line x1="25" y1="0" x2="32" y2="38"/><line x1="40" y1="0" x2="32" y2="38"/><line x1="60" y1="0" x2="68" y2="38"/><line x1="75" y1="0" x2="68" y2="38"/></svg>
-            <div class="balloon-basket"></div>
+          <div class="balloon portrait-balloon">
+            <svg class="balloon-illustration" viewBox="0 0 300 370" role="img" aria-labelledby="balloon-title">
+              <title id="balloon-title">A vintage hot-air balloon with Anastasiya’s portrait, stitched fabric panels, and a wicker basket</title>
+              <defs>
+                <linearGradient id="envelope-color" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e0b08a"/><stop offset=".48" stop-color="#b97454"/><stop offset="1" stop-color="#89573f"/></linearGradient>
+                <linearGradient id="balloon-light" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff9e8" stop-opacity=".3"/><stop offset=".48" stop-color="#fff9e8" stop-opacity="0"/><stop offset="1" stop-color="#3c3027" stop-opacity=".2"/></linearGradient>
+                <linearGradient id="basket-color" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b78a53"/><stop offset="1" stop-color="#795533"/></linearGradient>
+                <clipPath id="portrait-panel"><path d="M150 18 C103 25 69 81 78 138 C88 193 120 238 133 265 H167 C180 238 212 193 222 138 C231 81 197 25 150 18Z"/></clipPath>
+                <pattern id="basket-weave" width="8" height="6" patternUnits="userSpaceOnUse"><path d="M0 1H8 M0 4H8" stroke="#f2d4a2" stroke-opacity=".3"/><path d="M2 0V3 M6 3V6" stroke="#513b26" stroke-opacity=".35"/></pattern>
+              </defs>
+              <path d="M150 18 C223 18 274 60 272 116 C270 177 210 220 173 268 H127 C90 220 30 177 28 116 C26 60 77 18 150 18Z" fill="url(#envelope-color)" stroke="#876345" stroke-width="1.5"/>
+              <path d="M150 18 C84 24 47 67 53 124 C60 182 109 232 127 268 H142 C119 218 98 170 96 119 C92 65 115 30 150 18Z" fill="#f1e4c6"/>
+              <path d="M150 18 C216 24 253 67 247 124 C240 182 191 232 173 268 H158 C181 218 202 170 204 119 C208 65 185 30 150 18Z" fill="#e7d9b9"/>
+              <image href="portrait.jpg" x="57" y="20" width="186" height="246" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-panel)"/>
+              <path d="M150 18 C223 18 274 60 272 116 C270 177 210 220 173 268 H127 C90 220 30 177 28 116 C26 60 77 18 150 18Z" fill="url(#balloon-light)"/>
+              <g fill="none" stroke="#79583f" stroke-width="1" opacity=".55"><path d="M150 18 C84 24 47 67 53 124 C60 182 109 232 127 268"/><path d="M150 18 C216 24 253 67 247 124 C240 182 191 232 173 268"/><path d="M150 18 C103 25 69 81 78 138 C88 193 120 238 133 265"/><path d="M150 18 C197 25 231 81 222 138 C212 193 180 238 167 265"/></g>
+              <path d="M129 263H171L166 278H134Z" fill="#6d5741" stroke="#574633"/>
+              <g fill="none" stroke="#795c3d" stroke-width="2"><path d="M132 273L116 312 M168 273L184 312 M141 278L133 312 M159 278L167 312"/><path d="M125 311V298Q150 291 175 298V311"/></g>
+              <path d="M146 296Q139 287 150 280Q161 288 154 296" fill="#dfa34c"/>
+              <path d="M149 296Q146 290 151 287L153 296" fill="#ffdf94"/>
+              <path d="M108 310H192L185 355Q150 365 115 355Z" fill="url(#basket-color)" stroke="#735333" stroke-width="1.5"/>
+              <path d="M108 310H192L185 355Q150 365 115 355Z" fill="url(#basket-weave)"/>
+              <path d="M108 310Q150 315 192 310" fill="none" stroke="#60462e" stroke-width="6" stroke-linecap="round"/>
+              <path d="M119 315L124 355 M181 315L176 355" stroke="#d5b27c" stroke-width="3" opacity=".8"/>
+            </svg>
+            <button class="balloon-info" type="button" data-title="Let’s connect" data-template="contact-template" aria-label="Info: contact Anastasiya Glegg" aria-haspopup="dialog">Info</button>
           </div>
         </div>
-        <div class="contact"><a href="mailto:anastasiyaglegg@gmail.com">anastasiyaglegg@gmail.com</a><span>New York, NY</span></div>
+        <p class="portrait-caption">A little curiosity goes a long way.</p></div>
       </div>
-      <a class="scroll-cue" href="#voyage">Set sail <span>&darr;</span></a>
+      <div class="intro-bottom"><span>Writing · Art · Thoughtful technology</span><a href="#projects">Discover what’s below ↓</a></div>
+    </section>
+    <section class="work-section" id="projects" aria-labelledby="work-title">
+      <header class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="work-title">Ideas, brought to life.</h2></div><p>Thoughtful tools that make everyday experiences a little clearer and more human.</p></header>
+      <div class="work-grid">
+        <article class="work-card"><div class="project-art warning-art" aria-hidden="true"><span class="art-index">01 / Awareness</span><div class="signal-rings"><i></i><i></i><i></i></div><span class="art-caption">Notice. Understand. Respond.</span></div><div class="card-copy"><p class="eyebrow">Interactive experience</p><h3>Warning Signs</h3><p>A space for noticing, understanding, and responding to warning signs.</p><a href="https://warning-signs.vercel.app/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div></article>
+        <article class="work-card"><div class="project-art recruit-art" aria-hidden="true"><span class="art-index">02 / Connection</span><div class="connection-art"><i></i><i></i><i></i><i></i></div><span class="art-caption">People, thoughtfully connected.</span></div><div class="card-copy"><p class="eyebrow">Recruiting workspace</p><h3>Recruitator</h3><p>A thoughtful workspace that makes recruiting coordination clearer and more human.</p><a href="https://recruitator.vercel.app/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div></article>
+        <article class="work-card"><div class="project-art bookstore-art" aria-hidden="true"><span class="art-index">03 / Discovery</span><div class="book-art"><i></i><i></i><i></i><i></i><i></i></div><span class="art-caption">A place for your next chapter.</span></div><div class="card-copy"><p class="eyebrow">Connected bookstore</p><h3>Riverside Bookstore</h3><p>One connected experience for readers, staff, and the work behind the shelves.</p><div class="card-links"><a href="https://riverside-customer-app.vercel.app/" target="_blank" rel="noopener noreferrer">Visit bookstore ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://riverside-staff-dashboard.vercel.app/" target="_blank" rel="noopener noreferrer">Staff dashboard ↗<span class="sr-only"> (opens in a new tab)</span></a></div></div></article>
+      </div>
     </section>
     <section class="voyage-page" id="voyage" aria-labelledby="voyage-title">
-      <header class="voyage-copy"><h2 id="voyage-title">A little voyage</h2><p>Follow a sail into another current of my creative world.</p></header>
+      <header class="voyage-copy"><p class="eyebrow">02 / Beyond the expected</p><h2 id="voyage-title">Anastasiya’s Voyage</h2><p>Choose a sail to explore. Tap the boat’s name to get to know the person at the helm.</p></header>
+      <div class="voyage-scene">
       <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div><div class="cloud cloud-three" aria-hidden="true"></div>
       <div class="gulls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="ocean" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="dolphin-playground" aria-hidden="true">
+        <div class="dolphin-air">
+          <svg class="leaping-dolphin" viewBox="0 0 160 90" focusable="false">
+            <defs>
+              <linearGradient id="dolphin-skin" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6697a7"/><stop offset=".5" stop-color="#416c80"/><stop offset="1" stop-color="#294c60"/></linearGradient>
+              <linearGradient id="dolphin-belly" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d0e4e3"/><stop offset="1" stop-color="#86b5c0"/></linearGradient>
+            </defs>
+            <!-- Tail flukes, arched body, dorsal fin, and a long rounded beak. -->
+            <path d="M30 57Q14 43 4 50Q11 60 23 64Q14 72 16 82Q32 79 38 62Z" fill="#355d70"/>
+            <path d="M28 59C45 35 59 27 79 28C74 20 76 11 84 7C84 19 93 24 100 29C117 29 129 37 133 44L153 48Q160 51 151 55L135 55C127 65 112 68 93 63C67 54 49 52 33 65Z" fill="url(#dolphin-skin)" stroke="#315466" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M34 62C57 43 73 47 93 54C109 60 125 59 136 52L150 53C133 55 132 67 111 65C85 65 61 50 34 62Z" fill="url(#dolphin-belly)"/>
+            <path d="M84 51Q90 73 107 78Q108 65 99 56Z" fill="#355d70"/>
+            <path d="M43 47Q66 29 95 35" fill="none" stroke="#b6d6dc" stroke-width="2" opacity=".55" stroke-linecap="round"/>
+            <circle cx="125" cy="44" r="2.3" fill="#183949"/><circle cx="125.6" cy="43.4" r=".7" fill="#f7f5ef"/>
+            <path d="M133 51Q140 53 149 52" fill="none" stroke="#315466" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="dolphin-splash splash-takeoff"><i></i><i></i><i></i><i></i><span></span></div>
+        <div class="dolphin-splash splash-landing"><i></i><i></i><i></i><i></i><span></span></div>
+      </div>
       <div class="lighthouse">
         <div class="lh-beam" aria-hidden="true"></div>
         <div class="lh-lantern" aria-hidden="true"></div>
@@ -48,13 +106,25 @@
         <div class="lh-rocks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="yacht" aria-label="A gently rocking yacht. Choose a sail to explore.">
-        <button class="bio-flag" type="button" aria-expanded="false">Bio</button><div class="mast"></div><div class="cabin"><i></i><i></i><i></i></div><div class="rail"></div><div class="hull"></div><div class="hull-line"></div>
+        <div class="social-flags" aria-label="Social profiles — links coming soon"><span class="social-flag instagram" title="Instagram profile link coming soon">Instagram</span><span class="social-flag linkedin" title="LinkedIn profile link coming soon">LinkedIn</span><span class="social-flag facebook" title="Facebook profile link coming soon">Facebook</span></div><div class="mast"></div><div class="cabin"><i></i><i></i><i></i></div><div class="rail"></div><div class="hull"></div><div class="hull-line"></div>
+        <button class="boat-name" type="button" data-title="At the helm" data-template="bio-template" aria-label="Read the biography of Anastasiya Glegg">Anastasiya’s Voyage <span aria-hidden="true">↗</span></button>
         <a class="sail poetry" href="#projects" data-title="Projects" data-template="projects-template" aria-label="Projects"><span class="letter-stack projects-stack" aria-hidden="true">P<br>R<br>O<br>J<br>E<br>C<br>T<br>S</span></a>
         <a class="sail songs" href="#poetry-publications" data-title="Poetry and Publications" aria-label="Poetry and Publications"><span class="letter-stack poetry-stack" aria-hidden="true">P<br>O<br>E<br>T<br>R<br>Y</span></a>
         <a class="sail art" href="#art" data-title="Art" aria-label="Art"><span class="letter-stack art-stack" aria-hidden="true">A<br>R<br>T</span></a>
       </div>
-      <aside class="bio-note" id="bio-note" aria-live="polite"><button class="bio-close" type="button" aria-label="Close bio">×</button><p class="eyebrow">About me</p><p>I’m Anastasiya: a creative problem solver who brings together writing, art, music, curiosity, and thoughtful use of technology to make ideas feel clear and human.</p></aside>
+      </div>
+      <div class="voyage-controls" aria-label="Explore the voyage"><a href="#projects">Projects ↗</a><button type="button" data-title="Poetry and Publications">Poetry &amp; publications</button><button type="button" data-title="Art">Art</button><button type="button" data-title="Vision" data-vision>Vision</button></div>
+      <p class="voyage-footnote">Every good voyage begins with curiosity.</p>
     </section>
+    <footer class="site-footer"><div><p class="eyebrow">Let’s make something thoughtful.</p><a class="footer-email" href="mailto:anastasiyaglegg@gmail.com">Say hello <span aria-hidden="true">↗</span></a></div><div><p>Anastasiya Glegg · New York, NY</p><a href="#top">Back to the top ↑</a></div></footer>
+    <template id="bio-template">
+      <div class="biography-copy">
+        <p>Anastasiya Glegg (née Ibragimov) is a writer, artist, and AI-native builder whose path connects a lifelong love of language with a curiosity about how things work. Born in Baku, Azerbaijan, in 1984, she began writing poetry and short stories as a child. She has published more than 300 poems online, translated over 50 poems from English into Russian, and had her writing published in two books.</p>
+        <p>Her professional life has taken her from personal assistance to pharmaceutical production as a technician in Sanofi Pasteur’s inspection department, and into patient care coordination. Across these different settings, her work has involved supporting people, attending to details, and helping everyday processes run smoothly. Today, she brings that practical perspective and a writer’s imagination to building thoughtful digital experiences with AI. She is also beginning to develop her copywriting skills, exploring how clear, purposeful language can help people understand an idea and take the next step.</p>
+      </div>
+      <a class="button primary bio-contact" href="mailto:anastasiyaglegg@gmail.com">Say hello ↗</a>
+    </template>
+    <template id="contact-template"><p>Have an idea, a question, or something you’d like to create together? I’d love to hear from you.</p><dl class="contact-details"><dt>Email</dt><dd><a href="mailto:anastasiyaglegg@gmail.com">anastasiyaglegg@gmail.com</a></dd><dt>Based in</dt><dd>New York, NY</dd></dl><a class="button primary" href="mailto:anastasiyaglegg@gmail.com">Send me a note ↗</a></template>
     <template id="projects-template">
       <div class="project-list">
         <article class="project-item"><h3>Warning Signs</h3><p>An interactive project for noticing, understanding, and responding to warning signs.</p><a href="https://warning-signs.vercel.app/" target="_blank" rel="noreferrer">Visit project ↗</a></article>
@@ -62,8 +132,8 @@
         <article class="project-item"><h3>Riverside Bookstore</h3><p>One connected bookstore experience, bringing together the customer shop, staff operations, and the technology working quietly behind the shelves.</p><div class="project-actions"><a href="https://riverside-customer-app.vercel.app/" target="_blank" rel="noreferrer">Visit the bookstore ↗</a><a href="https://riverside-staff-dashboard.vercel.app/" target="_blank" rel="noreferrer">View staff dashboard ↗</a></div></article>
       </div>
     </template>
-    <dialog class="sail-dialog" id="sail-dialog"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">Portfolio section</p><h2 id="dialog-title"></h2><div id="dialog-content"><p>This collection is being prepared.</p></div></dialog>
+    <dialog class="sail-dialog" id="sail-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close">×</button><p class="eyebrow">A creative voyage</p><h2 id="dialog-title"></h2><div id="dialog-content"><p>This collection is being prepared.</p></div></dialog>
   </main>
-  <script>const dialog=document.querySelector('#sail-dialog'),dialogContent=document.querySelector('#dialog-content'),placeholder='This collection is being prepared.';document.querySelectorAll('.sail, .lh-sign').forEach(sail=>sail.addEventListener('click',event=>{event.preventDefault();document.querySelector('#dialog-title').textContent=sail.dataset.title;dialogContent.replaceChildren();const template=sail.dataset.template&&document.querySelector(`#${sail.dataset.template}`);if(template){dialogContent.append(template.content.cloneNode(true));}else{const copy=document.createElement('p');copy.textContent=sail.dataset.copy||placeholder;dialogContent.append(copy);}dialog.showModal();}));document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());const bio=document.querySelector('#bio-note'),flag=document.querySelector('.bio-flag');flag.addEventListener('click',()=>{bio.classList.toggle('open');flag.setAttribute('aria-expanded',bio.classList.contains('open'));});document.querySelector('.bio-close').addEventListener('click',()=>{bio.classList.remove('open');flag.setAttribute('aria-expanded','false');});</script>
+  <script src="portfolio.js"></script>
 </body>
 </html>

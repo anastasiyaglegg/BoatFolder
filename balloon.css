@@ -1,0 +1,87 @@
+/* A single scalable illustration keeps the envelope, rigging, and basket aligned. */
+.portrait-scene .balloon-sky {
+  height: auto;
+  aspect-ratio: 350 / 430;
+  max-width: 350px;
+  overflow: hidden;
+}
+
+.portrait-balloon {
+  width: 86%;
+  top: 5%;
+  aspect-ratio: 300 / 370;
+  filter: drop-shadow(0 12px 10px rgb(46 67 56 / 12%));
+  animation: portrait-balloon-float 10s ease-in-out infinite;
+}
+
+.balloon-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.balloon-info {
+  position: absolute;
+  top: 84%;
+  left: 35%;
+  width: 30%;
+  height: 13%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #fff8e8;
+  font: 500 14px/1 var(--font-mono);
+  text-shadow: 0 1px 3px #46301c;
+  letter-spacing: .06em;
+}
+
+.balloon-info:hover {
+  background: rgb(57 39 22 / 18%);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.portrait-balloon:hover,
+.portrait-balloon:focus-within {
+  animation-play-state: paused;
+}
+
+.contact-details {
+  margin: 28px 0;
+}
+
+.contact-details dt {
+  font: 11px/1.5 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+.contact-details dd {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a {
+  display: inline-block;
+  padding: 8px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@keyframes portrait-balloon-float {
+  0%, 100% { transform: translate(-50%, 0) rotate(-1deg); }
+  50% { transform: translate(-50%, -8px) rotate(1deg); }
+}
+
+@media (max-width: 720px) {
+  .portrait-scene .balloon-sky { max-width: 300px; }
+  .balloon-info { top: 82%; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-balloon { animation: none; transform: translateX(-50%); }
+}
